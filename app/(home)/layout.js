@@ -1,7 +1,7 @@
 import '@/styles/globals.css'
 import { Comfortaa } from 'next/font/google'
 
-const comfortaa = Comfortaa({
+export const comfortaa = Comfortaa({
   subsets: ["latin"],
   weight: ["300", "500", "700"]
 })
