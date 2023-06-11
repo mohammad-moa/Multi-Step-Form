@@ -3,7 +3,7 @@
 import { useId } from "react";
 import { FormControl, InputLabel, OutlinedInput } from "@mui/material";
 
-export default function Input({ typeForm, label, full, half }) {
+export default function Input({ typeForm, type, label, full, half }) {
 
     const customId = useId()
 
@@ -15,9 +15,9 @@ export default function Input({ typeForm, label, full, half }) {
                         <>
                             <InputLabel htmlFor={customId}>{label}</InputLabel>
                             <OutlinedInput
+                                type={type}
                                 id={customId}
                                 label={label}
-
                             />
                         </>
                     ) : (
