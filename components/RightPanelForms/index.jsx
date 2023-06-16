@@ -9,6 +9,18 @@ import { deepPurple } from "@mui/material/colors";
 export default function RightPanelForms() {
   const { activeStep, steps } = useContext(MultiStepContext);
 
+  const activeForm = () => {
+    return activeStep === 1 ? (
+      <PersonalForm />
+    ) : activeStep === 2 ? (
+      <ContactForm />
+    ) : activeStep === 3 ? (
+      <MessageForm />
+    ) : (
+      ""
+    );
+  };
+
   return (
     <>
       <Box>
@@ -19,9 +31,8 @@ export default function RightPanelForms() {
           {steps[activeStep - 1]} Info
         </Typography>
       </Box>
-      <PersonalForm />
-      {/* <ContactForm /> */}
-      {/* <MessageForm /> */}
+
+      {activeForm()}
     </>
   );
 }
