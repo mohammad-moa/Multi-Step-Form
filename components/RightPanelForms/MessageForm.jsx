@@ -1,5 +1,14 @@
+import { Stack } from "@mui/material";
+import Input from "../Common/Input";
+
 export default function MessageForm() {
     return (
-        <div>MessageForm</div>
+        <Stack direction={"row"} flexWrap={"wrap"} justifyContent={"space-between"}>
+            <Input
+                typeForm={"textarea"}
+                label={"Message"}
+                full
+            />
+        </Stack>
     )
 }
