@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import MultiStepProvider from "@/context/MultiStepContext";
 import LeftPanel from "@/components/LeftPanel/LeftPanel";
@@ -8,9 +8,9 @@ import { comfortaa } from "./layout";
 
 const theme = createTheme({
   typography: {
-    fontFamily: comfortaa.style.fontFamily
-  }
-})
+    fontFamily: comfortaa.style.fontFamily,
+  },
+});
 
 export default function Home() {
   return (
@@ -26,5 +26,5 @@ export default function Home() {
         </Grid>
       </MultiStepProvider>
     </ThemeProvider>
-  )
+  );
 }
